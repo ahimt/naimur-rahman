@@ -1,0 +1,6 @@
+{
+  "name": "A4 Resume Designer",
+  "description": "A premium, ATS-friendly, A4 print-perfect resume builder and redesigned CV for Naimur Rahman with live preview, theme customization, and standalone offline export.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
