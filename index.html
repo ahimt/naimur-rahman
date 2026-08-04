@@ -1,13 +1,282 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naimur Rahman - Curriculum Vitae</title>
+  <!-- Bootstrap 5.3 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom CSS3 Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Screen Header / Action Bar (Hidden in Print) -->
+  <header class="screen-toolbar no-print">
+    <div class="container-fluid d-flex justify-content-between align-items-center py-2 px-3">
+      <div class="d-flex align-items-center gap-2">
+        <span class="badge bg-primary fs-6">A4 CV</span>
+        <h1 class="h6 mb-0 text-white fw-bold">Naimur Rahman — Resume</h1>
+      </div>
+      <div class="d-flex gap-2 align-items-center">
+        <button id="btnPrint" class="btn btn-sm btn-success fw-semibold d-flex align-items-center gap-1">
+          <i class="bi bi-printer-fill"></i> Print / Save as A4 PDF
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Outer Centered Wrapper -->
+  <div class="resume-wrapper">
+    <!-- EXACT A4 CANVAS (210mm x 297mm) -->
+    <main class="a4-page" id="resumeCanvas">
+      
+      <!-- LEFT SIDEBAR -->
+      <aside class="resume-sidebar">
+        
+        <!-- Profile Photo -->
+        <div class="profile-photo-container text-center">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400" alt="Naimur Rahman" class="profile-photo">
+        </div>
+
+        <!-- Contact Info -->
+        <section class="sidebar-section">
+          <h2 class="sidebar-title">
+            <i class="bi bi-person-lines-fill"></i> Contact
+          </h2>
+          <div class="contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <span>01771092543</span>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <span>naimurr183@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Road- 02, Block- G, Mirpur-2, Dhaka- 1216</span>
+          </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="sidebar-section">
+          <h2 class="sidebar-title">
+            <i class="bi bi-mortarboard-fill"></i> Education
+          </h2>
+          
+          <div class="edu-item">
+            <div class="edu-year">2025</div>
+            <div class="edu-degree">B.Sc. in Textile Engineering (Apparel)</div>
+            <div class="edu-school">City University</div>
+            <div class="edu-result">CGPA: 3.19</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-year">2020</div>
+            <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+            <div class="edu-school">Sristi College of Tangail</div>
+            <div class="edu-sub">Dhaka Board | Science Group</div>
+            <div class="edu-result">GPA: 4.33 out of 5.00</div>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-year">2018</div>
+            <div class="edu-degree">Secondary School Certificate (SSC)</div>
+            <div class="edu-school">Jadunath Pilot High School & College</div>
+            <div class="edu-sub">Dhaka Board | Science Group</div>
+            <div class="edu-result">GPA: 4.22 out of 5.00</div>
+          </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="sidebar-section">
+          <h2 class="sidebar-title">
+            <i class="bi bi-tools"></i> Skills
+          </h2>
+          <div class="skill-list">
+            <span class="skill-badge">Microsoft Word</span>
+            <span class="skill-badge">Microsoft Excel</span>
+            <span class="skill-badge">Microsoft PowerPoint</span>
+            <span class="skill-badge">Internet Browsing</span>
+            <span class="skill-badge">Basic Documentation</span>
+            <span class="skill-badge">Report Preparation</span>
+            <span class="skill-badge">Data Management</span>
+            <span class="skill-badge">Quick Learner</span>
+          </div>
+        </section>
+
+        <!-- Leadership Section -->
+        <section class="sidebar-section">
+          <h2 class="sidebar-title">
+            <i class="bi bi-star-fill"></i> Leadership
+          </h2>
+          <div class="lead-title">Vice President</div>
+          <div class="lead-org">City University Textile Club</div>
+          <div class="lead-period">2024 – 2025</div>
+        </section>
+
+        <!-- Language Section -->
+        <section class="sidebar-section">
+          <h2 class="sidebar-title">
+            <i class="bi bi-translate"></i> Language
+          </h2>
+          <div class="lang-item">
+            <span class="lang-name">Bengali</span>
+            <span class="lang-level">Native</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">English</span>
+            <span class="lang-level">Good</span>
+          </div>
+        </section>
+
+      </aside>
+
+      <!-- MAIN CONTENT AREA -->
+      <section class="resume-main">
+        
+        <!-- Main Header -->
+        <header class="header-block">
+          <h1 class="applicant-name">NAIMUR RAHMAN</h1>
+          <p class="applicant-title">Textile Engineering (Apparel) Graduate</p>
+        </header>
+
+        <!-- Profile Summary -->
+        <article class="summary-block">
+          <p class="profile-summary-text">
+            Motivated and detail-oriented B.Sc. in Textile Engineering (Apparel) graduate with a strong academic foundation in apparel manufacturing, garment production processes, and quality standards. Experienced in student leadership as Vice President of the City University Textile Club, demonstrating excellent leadership, communication, event management, and teamwork skills. Passionate about contributing to the growth of the textile and apparel industry through continuous learning and professional excellence.
+          </p>
+        </article>
+
+        <!-- Experience & Objectives -->
+        <section class="main-section">
+          <h2 class="section-heading">
+            <i class="bi bi-briefcase-fill"></i> Experience & Career Objective
+          </h2>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Seeking an Entry-Level Position</span>
+              <span class="timeline-period">2025 – Present</span>
+            </div>
+            <p class="timeline-desc">
+              Actively seeking an opportunity to begin a professional career in the textile and apparel industry where I can apply my academic knowledge, learn from experienced professionals, and contribute to organizational success.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Academic Projects & Training</span>
+              <span class="timeline-period">2020 – 2025</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Completed academic projects on apparel manufacturing and production processes.</li>
+              <li>Participated in workshops and industrial programs related to textile engineering.</li>
+              <li>Gained knowledge on fabric properties, garment construction, quality control, and production planning.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-header">
+              <span class="timeline-role">Volunteer & Community Activities</span>
+              <span class="timeline-period">2018 – 2020</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Volunteered in social and community service events.</li>
+              <li>Actively participated in university programs and cultural activities.</li>
+              <li>Developed leadership, communication, and teamwork skills through various co-curricular involvements.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Extra-Curricular Activities -->
+        <section class="main-section">
+          <h2 class="section-heading">
+            <i class="bi bi-award-fill"></i> Extra-Curricular Activities
+          </h2>
+          <ul class="timeline-bullets">
+            <li>Active participation in various workshops and programs arranged by textile industries.</li>
+            <li>Working as a volunteer in different social events.</li>
+            <li>Voluntary work in university and community programs.</li>
+          </ul>
+        </section>
+
+        <!-- Personal Information -->
+        <section class="main-section">
+          <h2 class="section-heading">
+            <i class="bi bi-person-vcard-fill"></i> Personal Information
+          </h2>
+          <div class="personal-grid">
+            <div class="personal-row">
+              <span class="personal-label">Father's Name:</span>
+              <span class="personal-value">Abdul Kuddus Miah</span>
+            </div>
+            <div class="personal-row">
+              <span class="personal-label">Mother's Name:</span>
+              <span class="personal-value">Nasima Akter</span>
+            </div>
+            <div class="personal-row">
+              <span class="personal-label">Date of Birth:</span>
+              <span class="personal-value">01 October 2002</span>
+            </div>
+            <div class="personal-row">
+              <span class="personal-label">Marital Status:</span>
+              <span class="personal-value">Single</span>
+            </div>
+            <div class="personal-row">
+              <span class="personal-label">Nationality:</span>
+              <span class="personal-value">Bangladeshi</span>
+            </div>
+            <div class="personal-row">
+              <span class="personal-label">Religion:</span>
+              <span class="personal-value">Islam</span>
+            </div>
+            <div class="personal-row">
+              <span class="personal-label">Blood Group:</span>
+              <span class="personal-value">B+</span>
+            </div>
+            <div class="personal-row">
+              <span class="personal-label">National ID:</span>
+              <span class="personal-value">7818381968</span>
+            </div>
+            <div class="personal-row span-full">
+              <span class="personal-label">Permanent Address:</span>
+              <span class="personal-value">Nagarpur, Tangail-1936, Bangladesh</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- References -->
+        <section class="main-section">
+          <h2 class="section-heading">
+            <i class="bi bi-people-fill"></i> References
+          </h2>
+          <div class="reference-grid">
+            <div class="reference-card">
+              <div class="ref-name">Jarin Yesmin</div>
+              <div class="ref-desc">Assistant Professor, City University</div>
+              <div class="ref-contact">Phone: 01771777582</div>
+              <div class="ref-contact">Email: N/A</div>
+            </div>
+            <div class="reference-card">
+              <div class="ref-name">Abdullah Bin Atiq</div>
+              <div class="ref-desc">Merchandiser, East West Industrial Park</div>
+              <div class="ref-contact">Phone: 01790-418893</div>
+              <div class="ref-contact">Email: atiq@eastwestindpark.com</div>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Bootstrap 5.3 JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <!-- Vanilla JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

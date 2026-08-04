@@ -1,0 +1,445 @@
+/* ==========================================================================
+   Naimur Rahman - A4 Executive CV CSS3 Stylesheet
+   Compatible with Bootstrap 5.3 & Standalone Native Browser Execution
+   ========================================================================== */
+
+:root {
+  --primary-color: #0f172a;
+  --sidebar-bg: #1e293b;
+  --sidebar-text: #f8fafc;
+  --accent-color: #0284c7;
+  --accent-light: #e0f2fe;
+  --text-dark: #0f172a;
+  --text-muted: #475569;
+  --border-color: #e2e8f0;
+  --a4-width: 210mm;
+  --a4-height: 297mm;
+}
+
+/* Global Reset & Box Sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #090d16;
+  color: var(--text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Screen Action Toolbar */
+.screen-toolbar {
+  background-color: #0f172a;
+  border-bottom: 1px solid #334155;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Resume Wrapper for Centering in Screen Mode */
+.resume-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px 12px;
+  min-height: calc(100vh - 50px);
+}
+
+/* Exact A4 Page Box Model */
+.a4-page {
+  width: var(--a4-width);
+  height: var(--a4-height);
+  background-color: #ffffff;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  page-break-after: always;
+  page-break-inside: avoid;
+}
+
+/* Left Sidebar Layout */
+.resume-sidebar {
+  width: 72mm;
+  height: 100%;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.profile-photo-container {
+  margin-bottom: 4px;
+}
+
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebar-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--accent-color);
+  border-bottom: 1px solid #334155;
+  padding-bottom: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.72rem;
+  color: #cbd5e1;
+  word-break: break-word;
+}
+
+.contact-item i {
+  color: var(--accent-color);
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+/* Education Items */
+.edu-item {
+  margin-bottom: 6px;
+}
+
+.edu-year {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  background-color: rgba(2, 132, 199, 0.15);
+  display: inline-block;
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+
+.edu-degree {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f8fafc;
+  line-height: 1.2;
+}
+
+.edu-school {
+  font-size: 0.68rem;
+  color: #94a3b8;
+}
+
+.edu-sub {
+  font-size: 0.65rem;
+  color: #64748b;
+}
+
+.edu-result {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-top: 1px;
+}
+
+/* Skills Badges */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.skill-badge {
+  font-size: 0.65rem;
+  background-color: #334155;
+  color: #f1f5f9;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* Leadership */
+.lead-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.lead-org {
+  font-size: 0.7rem;
+  color: #cbd5e1;
+}
+
+.lead-period {
+  font-size: 0.65rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+/* Languages */
+.lang-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  padding: 2px 0;
+  border-bottom: 1px dashed #334155;
+}
+
+.lang-name {
+  color: #f8fafc;
+  font-weight: 600;
+}
+
+.lang-level {
+  color: #94a3b8;
+}
+
+/* Main Content Layout */
+.resume-main {
+  flex: 1;
+  padding: 24px 22px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.header-block {
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 8px;
+}
+
+.applicant-name {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.applicant-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+
+.summary-block {
+  background-color: #f8fafc;
+  border-left: 3px solid var(--accent-color);
+  padding: 8px 12px;
+  border-radius: 0 6px 6px 0;
+}
+
+.profile-summary-text {
+  font-size: 0.73rem;
+  color: var(--text-dark);
+  line-height: 1.45;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+/* Main Sections */
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1.5px solid var(--border-color);
+  padding-bottom: 3px;
+  margin-bottom: 2px;
+}
+
+.section-heading i {
+  color: var(--accent-color);
+}
+
+/* Timeline / Experience Items */
+.timeline-item {
+  margin-bottom: 4px;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2px;
+}
+
+.timeline-role {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.timeline-period {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  background-color: var(--accent-light);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.timeline-desc {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.timeline-bullets {
+  padding-left: 14px;
+  margin-bottom: 0;
+}
+
+.timeline-bullets li {
+  font-size: 0.71rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+  margin-bottom: 2px;
+}
+
+/* Personal Grid */
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px 12px;
+  background-color: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.personal-row {
+  display: flex;
+  font-size: 0.7rem;
+  gap: 6px;
+}
+
+.personal-row.span-full {
+  grid-column: span 2;
+}
+
+.personal-label {
+  font-weight: 600;
+  color: var(--primary-color);
+  min-width: 90px;
+}
+
+.personal-value {
+  color: var(--text-dark);
+}
+
+/* References */
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.reference-card {
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  padding: 8px 10px;
+  border-radius: 6px;
+  border-top: 2px solid var(--accent-color);
+}
+
+.ref-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.ref-desc {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 3px;
+}
+
+.ref-contact {
+  font-size: 0.67rem;
+  color: var(--text-dark);
+  line-height: 1.3;
+}
+
+/* ==========================================================================
+   PRINT MEDIA QUERY (STRICT A4 PRINTING)
+   ========================================================================== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .resume-wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .a4-page {
+    width: 210mm !important;
+    height: 297mm !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* Ensure background colors print correctly */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
